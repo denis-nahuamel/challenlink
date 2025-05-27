@@ -2,8 +2,16 @@
 
 function findPoint($strArr)
 {
-    // code goes here
-    return $strArr;
+    $firstArr = convertStringToArray($strArr[0]);
+    $secondArr = convertStringToArray($strArr[1]);
+    $commonElements = array_intersect($firstArr, $secondArr);
+
+    return $commonElements;
+}
+
+function convertStringToArray($str)
+{
+    return array_map('intval', explode(',', $str));
 }
 
 // keep this function call here
