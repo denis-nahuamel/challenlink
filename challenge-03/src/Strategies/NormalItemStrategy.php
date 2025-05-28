@@ -4,6 +4,7 @@ namespace App\Strategies;
 
 use App\Item;
 use App\Interfaces\ItemUpdateStrategy;
+use App\Constants\ItemNames;
 
 class NormalItemStrategy implements ItemUpdateStrategy
 {
@@ -23,10 +24,10 @@ class NormalItemStrategy implements ItemUpdateStrategy
     public function canHandle(string $itemName): bool
     {
         return !in_array($itemName, [
-            'Aged Brie',
-            'Backstage passes to a TAFKAL80ETC concert',
-            'Sulfuras, Hand of Ragnaros',
-            'Conjured Mana Cake'
+            ItemNames::BACKSTAGE_PASS,
+            ItemNames::AGED_BRIE,
+            ItemNames::SULFURAS,
+            ItemNames::CONJURED,
         ]);
     }
 }

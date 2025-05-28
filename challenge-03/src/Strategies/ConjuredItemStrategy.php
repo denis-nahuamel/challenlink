@@ -4,6 +4,7 @@ namespace App\Strategies;
 
 use App\Item;
 use App\Interfaces\ItemUpdateStrategy;
+use App\Constants\ItemNames;
 
 class ConjuredItemStrategy implements ItemUpdateStrategy
 {
@@ -22,6 +23,6 @@ class ConjuredItemStrategy implements ItemUpdateStrategy
 
     public function canHandle(string $itemName): bool
     {
-        return $itemName === 'Conjured Mana Cake';
+        return $itemName === ItemNames::CONJURED;
     }
 }

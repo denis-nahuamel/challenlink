@@ -4,6 +4,7 @@ namespace App\Strategies;
 
 use App\Item;
 use App\Interfaces\ItemUpdateStrategy;
+use App\Constants\ItemNames;
 
 class AgedBrieStrategy implements ItemUpdateStrategy
 {
@@ -22,6 +23,6 @@ class AgedBrieStrategy implements ItemUpdateStrategy
 
     public function canHandle(string $itemName): bool
     {
-        return $itemName === 'Aged Brie';
+        return $itemName === ItemNames::AGED_BRIE;
     }
 }

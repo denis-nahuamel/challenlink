@@ -4,6 +4,7 @@ namespace App\Strategies;
 
 use App\Item;
 use App\Interfaces\ItemUpdateStrategy;
+use App\Constants\ItemNames;
 
 class BackstagePassStrategy implements ItemUpdateStrategy
 {
@@ -31,6 +32,6 @@ class BackstagePassStrategy implements ItemUpdateStrategy
 
     public function canHandle(string $itemName): bool
     {
-        return $itemName === 'Backstage passes to a TAFKAL80ETC concert';
+        return $itemName === ItemNames::BACKSTAGE_PASS;
     }
 }
